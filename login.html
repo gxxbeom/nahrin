@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>스위스 나린 코리아</title>
+
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/login.js"></script>
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+	<!-- #navbar: start -->
+	<div id="navbar">
+		<nav>
+			<div id="left">
+				<a href="#">About us</a>
+				<a href="#">Product</a>
+				<a href="#">Community</a>
+				<a href="#">Contact us</a>
+			</div>
+			<a href="#" id="logo"><img src="images/logo1.png" alt="스위스나린" id="logo1"></a>
+			<div id="right">
+				<a href="#">Wish list</a>
+				<a href="#">Cart</a>
+				<a href="#">Log in</a>
+				<form>
+					<input type="search" placeholder="Search" required>
+					<button class="material-icons">search</button>
+				</form>
+			</div>
+		</nav>
+	</div>
+	<header>
+	</header>
+	<!-- #layout: start -->
+	<div id="layout" data-role="page">
+		<section id="white">
+			<div id="video">
+				<video muted autoplay loop>
+					<source src="videos/mainvideo.mp4" type="video/mp4">
+					<strong>Your browser does not support the video tag.</strong>
+				</video>
+			</div>
+			<div id="log">
+				<!-- <h1>nahrin</h1> -->
+				<div class="input-box">
+					<input id='userid' type='text' placeholder="아이디" required class="input-box_login">
+					<input id='pwd' type='password' placeholder="패스워드" required class="input-box_password">
+					<button class="btnon off-button">로그인</button>
+				</div>
+				<div id="sign">
+					<a href="#">아이디찾기</a>
+					<a href="#">비밀번호 찾기</a>
+					<a href="#">회원가입</a>
+				</div>
+				<div id="sns">
+					<div>
+						<a href="#"><img src="images/login/facebook.png"></a>
+					</div>
+					<div>
+						<a href="https://www.instagram.com/nahrinkr/"><img src="images/login/instagram.png"></a>
+					</div>
+					<div>
+						<a href="http://pf.kakao.com/_SdSqxj"><img src="images/login/kakao.png"></a>
+					</div>
+			</div>
+		</section>
+	</div>
+</body>
+</html>
