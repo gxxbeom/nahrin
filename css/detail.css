@@ -1,0 +1,394 @@
+@charset "utf-8";
+
+/*공통*/
+* {
+	margin:0; padding:0; box-sizing:border-box;	
+}
+::-webkit-scrollbar {width:0;}
+html {scroll-behavior:smooth;}
+html, body {
+	font:12pt/160% 'Noto Sans KR' , sans-serif;
+	color: #666;
+  line-height: 180%;
+}
+body {overflow-x:hidden;}
+img {
+	display:block; max-width:100%;
+}
+a {text-decoration:none; color:black;}
+
+/*상단 내비게이션*/
+#navbar {
+  /*height: 70px;*/
+  position: sticky; width:100vw;
+  background:rgba(255,255,255,0.9);
+  top:0; left:0;
+  z-index: 2; 
+
+}
+nav {
+  
+  display:flex; align-items:center;
+  margin:auto;
+  max-width:1180px;
+}
+.mainMenu:hover, .mainMenu.active {
+  color:#027128; font-weight: 700;
+}
+
+
+#left {
+  flex:1;
+  display:flex; justify-content:space-between;
+}
+#logo {
+	flex:0.8;
+}
+#right {
+	flex:1;
+	display:flex; align-items:center; 
+	justify-content:space-between;	
+}
+
+
+#left a {
+}
+#logo img {
+	margin:5px auto 7px;
+}
+#right>* {	
+	
+}
+#right form {	
+	position:relative;
+}
+#right input {
+	background:none; border:none;
+	font-size:1.1rem; 
+	padding:4px 0; max-width:150px;
+	border-bottom:1.5pt solid #777;
+}
+#right input::placeholder {
+	font-size:1.05rem; 
+}
+#right button.material-icons {
+	border:none; background:none;
+	position:absolute; right:0; bottom:0px;
+	font-size:2rem; color:#666;
+}
+li {
+  list-style: none;
+}
+/* 공용 viewmore 버튼 */
+.viewbtn 	{
+  display:block; width:120px; padding:10px 0;
+  text-align:center; border:2px solid white; color:white;
+  margin:auto; /* transition:0.5s; */
+}
+.viewbtn:hover { border:2px solid #027128; background:white; color:#027128;}
+
+/*헤더(카테고리 비디오)*/
+header {
+  color:white; background: #027128; 
+  text-align: center; height: 100px;
+  margin-top:100px;
+}
+header h1 {
+  padding:30px;
+}
+
+#layout {
+  position: relative;
+  width:1180px;
+  height:10200px;
+  margin:auto;
+  color: #000000;
+  touch-action:none;
+  /* border:2px solid red; */
+}
+/* 상품경로 */
+#pronav { margin-top:80px;}
+#pronav a { padding:15px;
+  color:#666; font-size:16px;
+}
+#pronav a:first-child { padding-left:0px;}
+#top { 
+  width:1180px; height:580px;
+  margin-top:60px;
+  display:flex;
+  /* border:2px solid blue; */
+}
+
+
+
+/* 상품정보 */
+#sec2 { 
+  width:480px; 
+  margin-left:120px; line-height: 230%;
+  z-index:1;
+}
+#sec2 h2 { font-weight: 300; font-size:2rem;}
+#name p { font-size:1.2rem; font-weight: 300;}
+#info { margin-top:30px;}
+#info span { font-weight: 500;}
+#price { font-weight:300; font-size:1.5rem; margin-top:30px; margin-bottom:30px;}
+#price2 { font-weight: 400; font-size:1.7rem;}
+#info2 { 
+  line-height: 150%;
+  padding-top:5px; padding-bottom:5px;
+}
+.add { 
+  padding-left:400px;
+  font-size: 14pt;
+}
+.menu  {
+  cursor:pointer;
+  padding:2px;
+  /* border:1px solid red; */
+}
+.menu>a {
+  font-size:10pt;
+}
+.menu .hide {
+  display:none;
+}
+.hide> li { 
+  font-size: 0.8rem;
+  line-height: 150%;
+  padding:15px;
+  padding-left: 0;
+}
+/* 찜버튼 */
+#heart {
+  border:none;
+  background: none;
+  float: right;
+  padding:20px;
+  transform: translateY(-70px);
+  font-size:2rem;
+  color:#666;
+  cursor:pointer;
+}
+
+/* 체크버튼 */
+.check { 
+  border:none;
+  color:#027128;
+  background: none;
+  cursor: pointer;
+  font-size:1.8rem;
+  margin-right:10px;
+  margin-top:10px;
+}
+#capacity {
+  display:flex;
+  padding:10px;
+  padding-left: 0;
+  font-size:0.9rem;
+}
+#small {
+  display: flex;
+}
+#big {
+  display: flex;
+  margin-left:30px;
+}
+#small p, #big p {
+  margin-top:5px;
+} 
+/* 버튼 */
+button {
+  cursor: pointer;
+}
+#box {
+  display: flex;
+  gap: 20px;
+  max-width: 600px;
+  margin: 10px auto 0;
+  
+}
+#box .btn {
+  width:150px;
+  height: 50px;
+  border: 1px solid #000;
+  vertical-align: middle;
+  background: white;
+}
+#box .btn:hover {
+  border:2px solid #027128;
+  color:white; background:#027128;
+}
+#box .btn.num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.count .minus,
+.count .plus {
+  width: 20px;
+  height: 20px;
+  border:none;
+  background: none;
+  font-size:14pt;
+}
+.count .minus:hover,
+.count .plus:hover {
+  width: 20px;
+  height: 20px;
+  border:none;
+  background: none;
+  color:#fff
+}
+#result {
+  font-weight: 100;
+  padding:0 20px 0 20px;
+  font-size:12pt;
+}
+#topEnd {
+  margin-top:15px;
+}
+
+
+/* 상세페이지 */
+#detail {
+  margin:auto;
+  width:860px;
+  height: 90%;
+}
+#detail>img {
+  margin-top:300px;
+}
+.line 	{
+  width:1px; height:200px;
+  margin:auto;
+  background: #ccc; border:none;
+  margin-top:100px;
+  margin-bottom: 100px;
+}
+#videoimg {
+  display:flex;
+}
+#videoimg>img {
+  width:430px; height: 430px;
+}
+video {
+  width:430px;
+}
+#coupon {
+  max-height: 400px;}
+#detail div:nth-of-type(3){
+  margin:auto;
+  width:860px;
+}
+#award {
+  width:860px; height: 650px;
+  background: #027128;
+  margin:auto;
+  position: absolute;
+}
+#award h2 {
+  color:white;
+  font-size:2.5rem;
+  margin-top:50px;
+  margin-bottom:50px;
+  text-align: center;
+}
+#award div {
+  background: #fff;
+  width:740px;
+  height: 470px;
+  margin:auto;
+}
+#award img {
+  width:680px;
+  height: 440px;
+  margin: auto;
+  padding-top:30px;
+}
+#cert {
+  margin-top:900px;
+  /* border:2px solid blue; */
+}
+#cert h3 {
+  text-align: center;
+  font-weight: 400;
+}
+#cert div {
+  display: flex;
+  justify-content:space-between;
+}
+#cert img {
+  width: 380px;
+}
+#cert figure {
+  text-align: center;
+  padding:50px;
+}
+#cert figcaption {
+  margin-top:15px;
+  margin-bottom:200px;
+}
+#proinfo h2 {
+  color:#027128;
+  font-weight: 900;
+  text-align: center;
+  padding:20px;
+  font-size:2rem;
+}
+#proinfo h3 { padding:20px; padding-left: 0;}
+#proinfo tr {
+  padding:5px;
+  text-align: left;
+}
+#proinfo th {
+  font-weight: 500;
+  margin-right:20px;
+}
+#proinfo td {
+  color:#666;
+  padding-left:100px;
+}
+#infoend { margin-top:20px;}
+
+
+/* 하단 푸터 */
+footer {
+  background:url("../images/footer2.jpg");
+	background-size:cover;
+  width: 100%;
+  height: 300px;
+  color:black;
+}
+footer> div { 
+  max-width:1180px; margin:auto;
+  display:flex; align-items:flex-start;
+  padding-top:45px;
+  
+}
+footer section:nth-of-type(1){
+	flex:1; 
+	margin-left:15px;
+}
+footer section:nth-of-type(2){
+	flex:1; 
+	display:flex; align-items:flex-start;
+	justify-content:space-between;
+}
+
+footer h4 {
+		padding-bottom:8px; font-size:1.02rem;
+}
+footer ol {list-style-position:inside;}
+footer ol {font-weight:300;}
+.ui-loader h1 {display: none;}
+
+
+
+/* 마크업검사용 */
+/* section h2 {
+  display:none;
+}
+#best h2 , #new h2 , footer h2 {
+  display:block;
+} */
+

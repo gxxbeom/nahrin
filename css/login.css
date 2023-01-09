@@ -32,6 +32,9 @@ nav {
   margin:auto;
   max-width:1180px;
 }
+.mainMenu:hover, .mainMenu.active {
+  color:#027128; font-weight: 700;
+}
 
 #left {
   flex:1;

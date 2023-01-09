@@ -174,7 +174,7 @@ main {
 /************************************/
 /* 상품공용 */
 
-.products {display:block; margin-bottom:500px; }
+.products {display:block; margin-bottom:200px; }
 .products>div {position:relative;}
 .products>div>section>div {
 		width:1800px;  height:500px; padding-top:50px; 
@@ -222,7 +222,7 @@ main {
 		position:absolute; right:0px;
 		height: 350px; width:1800px;  /* (320*5) */
 		background: linear-gradient(270deg, #027128 62.53%, #01290F 91.71%);
-		padding-bottom:200px;
+    /* border:5px solid red; */
 }
 #bestBg>h2 {text-align:right; padding-top:50px; padding-right:90px; font-size:2.5rem;}
 #bestBg>.viewbtn {position:relative; left:-200px;}
@@ -242,8 +242,14 @@ main {
 /* #bestBg div:not('.active') {margin-top:-50px;} */
 
 /* 메인 비디오  */
-video { width:980px; display: block; margin:auto; }
+video { width:780px; display: block; margin:auto; }
 /************************************/
+.line 	{
+  width:1px; height:200px;
+  margin:auto;
+  background: #ccc; border:none;
+  margin-bottom: 100px;
+}
 /* 구독섹션 */
 #sub {
   display:flex;
